@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Bebas Neue';
+  background-color: rgb(255, 250, 250);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+.title {
+  letter-spacing: 0.078em;
+  font-size:2.14em ;
+  font-weight: 700;
+  line-height: 1em;
+
+  text-align: center;
+  color: #333;
+
+}
+.title span {
+  letter-spacing: normal;
+  font-size: 0.6em;
+  color: #e21212;
+}
+.card {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #fff;
+
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  box-shadow: 10px 20px 40px rgba(0,0,0,.25);
+  transition: 1s;
+}
+.card .img-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  transform-origin: left;
+  transform-style: preserve-3d;
+  background: #000;
+  transition: 1s;
+
+}
+.card .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  transform-style: preserve-3d;
+}
+.card:hover {
+  transform: translateX(50%);
+}
+.card:hover .img-box {
+  transform: rotateY(-180deg);
+}
+.datails {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.social-icons {
+  position:relative;
+  display: flex;
+}
+.social-icons a {
+  text-decoration: none;
+  width:33px ;
+  height: 33px;
+  background: #333;
+  color:#fff;
+  margin: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  transition: .2s;
+
+}
+.social-icons a:hover {
+  background: #e21212;
+}
+
