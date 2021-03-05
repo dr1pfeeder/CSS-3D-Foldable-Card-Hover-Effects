@@ -108,4 +108,12 @@ main {
 .social-icons a:hover {
   background: #e21212;
 }
+@media(max-width:768px) {
+  .img-box {
+    display: none;
+  }
+  .card:hover {
+    transform: none;
+}
+}
 
